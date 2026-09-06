@@ -1,0 +1,18 @@
+{
+  "sample_id": "CM-17",
+  "material_description": "layered metallic single crystal",
+  "measurement": "longitudinal magnetoresistance",
+  "field_axis": "raw field sensor output; use field_calibration.csv",
+  "angle_axis": "raw rotator encoder output; use angle_calibration.csv",
+  "temperature_axis": "raw thermometer output; use temperature_calibration.csv",
+  "angle_series_temperature_k_nominal": 1.8,
+  "field_range_t_nominal": [
+    5.2,
+    16.0
+  ],
+  "notes": [
+    "Both up- and down-field sweeps were retained.",
+    "Some rows are duplicated, missing a resistivity value, or contain isolated acquisition spikes.",
+    "A weak second harmonic is present in addition to the dominant oscillation branch."
+  ]
+}

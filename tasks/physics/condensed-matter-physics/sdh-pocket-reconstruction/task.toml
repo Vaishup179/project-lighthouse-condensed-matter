@@ -1,0 +1,36 @@
+version = "1.0"
+
+[task]
+name = "lighthouse/sdh-pocket-reconstruction"
+description = "Reconstruct a quantum-oscillation Fermi-surface pocket from calibrated multi-angle and multi-temperature magnetotransport data."
+
+[metadata]
+domain = "Physics"
+subdomains = ["Condensed Matter Physics", "Electronic Transport", "Fermi-Surface Physics"]
+workflow_type = ["Computational modelling workflow", "Comparative workflow"]
+task_types = ["Quantum-oscillation analysis", "Instrument calibration", "Model selection", "Parameter inference"]
+skills = ["Magnetotransport analysis", "Signal processing", "Lifshitz-Kosevich analysis", "Nonlinear fitting", "Scientific validation"]
+tool_types = ["Python", "NumPy", "SciPy", "pandas", "command-line tools"]
+estimated_step_count = 34
+expected_expert_time = "75-120 minutes"
+difficulty = "hard"
+difficulty_explanation = "The result depends on three instrument calibrations, robust handling of imperfect sweeps, recovering a weak oscillatory branch in inverse field, keeping the fundamental separate from a harmonic, reconciling repeated sweep directions, comparing angular Fermi-surface models, fitting coupled thermal and Dingle damping, and carrying the fitted quantities into physically consistent derived parameters and holdout predictions."
+references = [
+  "Onsager, L. (1952). Interpretation of the de Haas-van Alphen effect. The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science, 43(344), 1006-1008. https://doi.org/10.1080/14786440908521019 [Informs the relation between oscillation frequency and extremal Fermi-surface area.]",
+  "Lifshitz, I. M., & Kosevich, A. M. (1956). Theory of magnetic susceptibility in metals at low temperature. Soviet Physics JETP, 2(4), 636-645. [Informs the temperature damping used to infer cyclotron effective mass.]",
+  "Shoenberg, D. (1984). Magnetic Oscillations in Metals. Cambridge University Press. https://doi.org/10.1017/CBO9780511897870 [Informs practical quantum-oscillation analysis, Dingle damping and Fermi-surface interpretation.]"
+]
+
+[agent]
+timeout_sec = 1800.0
+network_mode = "public"
+
+[verifier]
+timeout_sec = 300.0
+
+[environment]
+build_timeout_sec = 900.0
+network_mode = "public"
+cpus = 2
+memory_mb = 4096
+storage_mb = 4096

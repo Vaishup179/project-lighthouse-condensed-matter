@@ -1,0 +1,23 @@
+{
+  "angle_definition": "Field angle theta is measured from the crystallographic c axis.",
+  "candidate_models": [
+    {
+      "id": "quasi-2d",
+      "equation": "F(theta) = F0 / abs(cos(theta))",
+      "free_parameters": [
+        "F0"
+      ]
+    },
+    {
+      "id": "ellipsoidal-3d",
+      "equation": "F(theta) = F0 / sqrt(cos(theta)^2 + sin(theta)^2 / gamma^2)",
+      "free_parameters": [
+        "F0"
+      ],
+      "fixed_parameters": {
+        "gamma": 3.2
+      },
+      "note": "gamma comes from an independent normal-state anisotropy measurement."
+    }
+  ]
+}
